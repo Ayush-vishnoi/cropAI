@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 from datetime import datetime
-from database import supabase  # ✅ imported instead of redeclaring
+from database import supabase 
 
 app = Flask(__name__)
 CORS(app)
@@ -24,12 +24,12 @@ def test_db():
 
         return jsonify({
             "status": "ok",
-            "message": "✅ Test record inserted successfully!",
+            "message": "Test record inserted successfully!",
             "data": response.data
         }), 200
 
     except Exception as e:
-        print("❌ Error:", str(e))
+        print("Error:", str(e))
         return jsonify({"status": "error", "error": str(e)}), 500
 
 
