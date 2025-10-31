@@ -1,19 +1,41 @@
-# Ignore virtual environments
-venv/
-backend/venv/
-
-# Ignore Python cache
+# Python
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
 
-# Ignore model files and large data
+# Virtual environments
+venv/
+backend/venv/
+.env/
+
+# macOS system files
+.DS_Store
+
+# TensorFlow / ML
 *.h5
 *.ckpt
+*.tflite
+*.pb
 *.dylib
+*.npy
+*.npz
+
+# Data files
+*.csv
+*.json
 *.zip
 *.tar
 *.tar.gz
 
-# Ignore system files
-.DS_Store
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Flask / Cache
+instance/
+*.db
